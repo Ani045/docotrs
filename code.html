@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <Style>
+/* Section Styling */
+.custom-doctors-section {
+    padding: 2rem 1rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.custom-section-title {
+    font-size: 2.5rem;
+    color: #352000;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* Slider Container */
+.custom-slider-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.custom-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    gap: 1.5rem;
+}
+
+/* Doctor Card */
+.custom-doctor-card {
+    flex: 0 0 100%; /* Default for single card in view */
+    background: linear-gradient(135deg, #ffffff, #f8f8f8);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 2rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-doctor-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Doctor Image */
+.custom-doctor-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+    border: 4px solid #000000;
+}
+
+/* Doctor Text */
+.custom-role {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.custom-doctor-stat {
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons inside card */
+.custom-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.custom-whatsapp-btn, .custom-appointment-btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-whatsapp-btn {
+    background-color: #25D366;
+}
+
+.custom-whatsapp-btn:hover {
+    background-color: #1da851;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.5);
+}
+
+.custom-appointment-btn {
+    background-color: #007bff;
+}
+
+.custom-appointment-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Navigation Buttons */
+.custom-prev-btn, .custom-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 1.5rem;
+}
+
+.custom-prev-btn {
+    left: 15px;
+}
+
+.custom-next-btn {
+    right: 15px;
+}
+
+.custom-prev-btn:hover, .custom-next-btn:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Responsive Layout */
+@media (min-width: 768px) {
+    .custom-doctor-card {
+        flex: 0 0 48%; /* Show 2 cards on tablets */
+    }
+
+    .custom-doctor-image {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .custom-doctor-card {
+        flex: 0 0 30%; /* Show 3 cards on large screens */
+    }
+
+    .custom-doctor-image {
+        width: 190px;
+        height: 190px;
+    }
+}
+
+  </Style>
+
+</head>
+<body>
+  
+  <section class="custom-doctors-section" id="doctors-sec">
+    <h2 class="custom-section-title">Meet Our Doctors</h2>
+    <div class="custom-slider-container">
+        <div class="custom-slider">
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr-kuldeep-arora-cardiology.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Kuldeep Arora</h3>
+                <p class="custom-role">Senior Consultant ,Intervertional Cardiologist</p>
+                <p class="custom-doctor-stat">23+ Years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr._amit_kumar_chaurasia-_interventional_cardiologist_0.webp" alt="Dr. Vikram Barua Kaushik" class="custom-doctor-image">
+                <h3>Dr. Amit Kumar Chaurasia</h3>
+                <p class="custom-role">Consultant, Intervertional Cardiologist</p>
+                <p class="custom-doctor-stat">9+ Years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr-balbir-kalra.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Balbir Kalra</h3>
+                <p class="custom-role">Chief , Cardiac Surgeon </p>
+                <p class="custom-doctor-stat">28+ year Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr-sushant-srivastava.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Sushant Srivastava</h3>
+                <p class="custom-role">Chief , Cardiac Surgeon</p>
+                <p class="custom-doctor-stat">28+ years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr._giriraj_bora-min.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Giriraj Bora</h3>
+                <p class="custom-role">Additional Director, Gastrointestinal</p>
+                <p class="custom-doctor-stat">28+ years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr._pawan_rawal-min.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Pawan Rawal</h3>
+                <p class="custom-role">H.O.D , Gastrointestinal</p>
+                <p class="custom-doctor-stat">25+ years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr._nutan_agarwal_-_obstetrician_and_gynecologist (1).webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Nutan Agarwal</h3>
+                <p class="custom-role">H.O.D, Obstetricians and Gynecologists</p>
+                <p class="custom-doctor-stat">45+ years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr-paritosh-s-gupta-general-mi-surgery.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Paritosh S Gupta</h3>
+                <p class="custom-role">General Surgeon</p>
+                <p class="custom-doctor-stat">23 years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr._vikram_barua_kaushik-min.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Vikram Barua Kaushik</h3>
+                <p class="custom-role">Consultant , Urology</p>
+                <p class="custom-doctor-stat">37 years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr._hitesh_garg_-_orthopaedics_spine_surgeon-min.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Hitesh Garg</h3>
+                <p class="custom-role">H.O.D , Orthopaedic Spine</p>
+                <p class="custom-doctor-stat">23 years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/image-removebg-preview70-min (1).webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3> Dr. S K Rajan</h3>
+                <p class="custom-role">H.O.D , Spine Surgery</p>
+                <p class="custom-doctor-stat">22 years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr_himanshu_tyagi.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Himanshu Tyagi</h3>
+                <p class="custom-role">Senior Consultant , Spine Surgery</p>
+                <p class="custom-doctor-stat">12 years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr._ips_oberoi_-_orthopaedics-min.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. IPS Oberoi</h3>
+                <p class="custom-role">Chairman , Orthopaedic</p>
+                <p class="custom-doctor-stat">31 years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr._sanjay_sarup-min.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Sanjay Sarup</h3>
+                <p class="custom-role">Associate Director , Orthopaedic</p>
+                <p class="custom-doctor-stat">32 years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr_aditya_gupta.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3>Dr. Aditya Gupta</h3>
+                <p class="custom-role">Director , Brain Surgery</p>
+                <p class="custom-doctor-stat">30 years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+            </div>
+                <div class="custom-doctor-card">
+                    <img loading="lazy" src="assets/dr_sumit_singh-min.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                    <h3>Dr. Sumit Singh</h3>
+                    <p class="custom-role">Director , Neurology</p>
+                    <p class="custom-doctor-stat">27 years Experience</p>
+                    <div class="custom-action-buttons">
+                        <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                        <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                    </div>
+            </div>
+            <div class="custom-doctor-card">
+                <img loading="lazy" src="assets/dr-mukesh-patekar.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+                <h3> Dr. Mukesh Patekar</h3>
+                <p class="custom-role">Consultant , Oncology</p>
+                <p class="custom-doctor-stat">19 years Experience</p>
+                <div class="custom-action-buttons">
+                    <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                    <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+                </div>
+        </div>
+        <div class="custom-doctor-card">
+            <img loading="lazy" src="assets/dr-subhash-chandra-pande-radiation-oncology.webp" alt="Dr. Rajiv Yadav" class="custom-doctor-image">
+            <h3>Dr. Subodh Chandra Pande</h3>
+            <p class="custom-role">H.O.D , Radiation Oncologists</p>
+            <p class="custom-doctor-stat">41 years Experience</p>
+            <div class="custom-action-buttons">
+                <a href="https://wa.me/+918929000217" target="_blank" class="custom-whatsapp-btn">Chat on WhatsApp</a>
+                <a href="#hero-sec" class="custom-appointment-btn">Book Appointment</a>
+            </div>
+    </div>
+        </div>
+        <!-- Navigation Buttons -->
+        <button class="custom-prev-btn">&lt;</button>
+        <button class="custom-next-btn">&gt;</button>
+    </div>
+</section>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".custom-slider");
+    const prevBtn = document.querySelector(".custom-prev-btn");
+    const nextBtn = document.querySelector(".custom-next-btn");
+    const cards = document.querySelectorAll(".custom-doctor-card");
+    const totalCards = cards.length;
+
+    let currentIndex = 0;
+
+    function updateSliderPosition() {
+        const cardWidth = cards[0].clientWidth + 24; // Adjust for card width and gap
+        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    prevBtn.addEventListener("click", function () {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalCards - 1; // Loop to last
+        updateSliderPosition();
+    });
+
+    nextBtn.addEventListener("click", function () {
+        currentIndex = (currentIndex < totalCards - 1) ? currentIndex + 1 : 0; // Loop to first
+        updateSliderPosition();
+    });
+
+    window.addEventListener("resize", updateSliderPosition); // Recalculate on resize
+});
+
+  </script>
+
+
+</body>
+</html>
